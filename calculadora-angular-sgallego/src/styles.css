@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+    background-color: blue;
+}
+
+body{
+    margin: 0;
+    background-color: transparent !important;
+}
+
+
+.calculadora{
+    width: 33vw;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.pantalla{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    background-color: white;
+    grid-area: 1 / 1 / 2 / 5; 
+}
+
+.numeros{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    background-color: darkgray;
+}
+
+.pad{
+    display: flex;
+}
+
+.operaciones{
+    display: grid;
+    background-color: rgb(29, 149, 145);
+}
+
+.numBtn{
+    width: 100px;
+    height: 100px;
+    background-color: darkgray;
+    border-color: transparent;
+}
+
+.numBtn:active{
+    background-color: rgb(97, 97, 97);
+}
+
+.opeBtn{
+    width: 80px;
+    height: 50px;
+    background-color: rgb(29, 149, 145);
+    border-color: transparent;
+}
+
+.opeBtn:active{
+    background-color: rgb(19, 96, 93);
+}
+
