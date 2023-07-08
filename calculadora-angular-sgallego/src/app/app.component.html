@@ -9,32 +9,33 @@
 
 <div class="container-fluid">
   <div class="calculadora">
-    <div class="row">
-      <div class="col-12 pad">
-        <div class="numeros">
-          <div class="col-12 pantalla">0</div>
-          <button class="numBtn">9</button>
-          <button class="numBtn">8</button>
-          <button class="numBtn">7</button>
-          <button class="numBtn">6</button>
-          <button class="numBtn">5</button>
-          <button class="numBtn">4</button>
-          <button class="numBtn">3</button>
-          <button class="numBtn">2</button>
-          <button class="numBtn">1</button>
-          <button class="numBtn">.</button>
-          <button class="numBtn">0</button>
-          <button class="numBtn">00</button>
-        </div>
-        <div class="operaciones">
-          <button class="opeBtn">DEL</button>
-          <button class="opeBtn">/</button>
-          <button class="opeBtn">X</button>
-          <button class="opeBtn">-</button>
-          <button class="opeBtn">+</button>
-          <button class="opeBtn">=</button>
-        </div>
+      <div class="row ">
+          <div class="col-12 numPantalla bg-white">{{pantalla}}</div>
+          <div class="col-12 numPantalla bg-white">{{total}}</div>
       </div>
+      <div class="row">
+          <div class="col-10 numeros">
+            <button (click)="comprobarBoton('9')" class="btnNum">9</button>
+            <button (click)="comprobarBoton('8')" class="btnNum">8</button>
+            <button (click)="comprobarBoton('7')" class="btnNum">7</button>
+            <button (click)="comprobarBoton('6')" class="btnNum">6</button>
+            <button (click)="comprobarBoton('5')" class="btnNum">5</button>
+            <button (click)="comprobarBoton('4')" class="btnNum">4</button>
+            <button (click)="comprobarBoton('3')" class="btnNum">3</button>
+            <button (click)="comprobarBoton('2')" class="btnNum">2</button>
+            <button (click)="comprobarBoton('1')" class="btnNum">1</button>
+            <button (click)="comprobarBoton('.')" class="btnNum">.</button>
+            <button (click)="comprobarBoton('0')" class="btnNum">0</button>
+            <button (click)="comprobarBoton('00')" class="btnNum">00</button>
+          </div>
+          <div class="col-2 operaciones">
+            <button (click)="comprobarBoton('DEL')" class="btnOpe">DEL</button>
+            <button (click)="comprobarBoton('/')" class="btnOpe">/</button>
+            <button (click)="comprobarBoton('*')" class="btnOpe">X</button>
+            <button (click)="comprobarBoton('-')" class="btnOpe">-</button>
+            <button (click)="comprobarBoton('+')" class="btnOpe">+</button>
+            <button (click)="comprobarBoton('=')" class="btnOpe">=</button>
+          </div>
     </div>
   </div>
 </div>

@@ -1,64 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
-html{
-    background-color: blue;
-}
+/* General */
 
-body{
+body {
     margin: 0;
-    background-color: transparent !important;
+    background-color: rgb(139, 215, 210);
 }
 
-
-.calculadora{
-    width: 33vw;
-    position: absolute;
-    top:  50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.pantalla{
-    font-family: Arial, Helvetica, sans-serif;
+.calculadora {
+    width: 25vw;
+    height: 60vh;
+}
+
+@media (max-width: 768px) {
+    .calculadora {
+    width: 80vw;
+    }
+}
+
+/* Pantalla de calculo */
+
+.numPantalla { 
     text-align: right;
-    background-color: white;
-    grid-area: 1 / 1 / 2 / 5; 
+    font-size:x-large;
 }
+
+/* Div de los numeros */
 
 .numeros{
+    color: white;
+    background-color: rgb(161, 137, 137);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:1fr 1fr 1fr 1fr;
-    background-color: darkgray;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 500px;
 }
 
-.pad{
-    display: flex;
-}
+/* Div de las operaciones */
 
 .operaciones{
+    color: white;
+    background-color: rgb(30, 211, 199);
     display: grid;
-    background-color: rgb(29, 149, 145);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 500px;
 }
 
-.numBtn{
-    width: 100px;
-    height: 100px;
-    background-color: darkgray;
+/* Botones de los numeros */
+
+.btnNum{
     border-color: transparent;
+    background-color: rgb(161, 137, 137);
+    color: white;
+    font-size: 20px;
 }
 
-.numBtn:active{
-    background-color: rgb(97, 97, 97);
-}
+/* Botones de las operaciones */
 
-.opeBtn{
-    width: 80px;
-    height: 50px;
-    background-color: rgb(29, 149, 145);
+.btnOpe{
     border-color: transparent;
+    background-color: rgb(30, 211, 199);
+    color: white;
+    font-size: 20px;
 }
 
-.opeBtn:active{
-    background-color: rgb(19, 96, 93);
+/* Botones al clickarse */
+
+.btnNum:active{
+    border-color: transparent;
+    background-color: rgb(130, 110, 110);
+    color: white;
+    font-size: 20px;
 }
 
+.btnOpe:active{
+    border-color: transparent;
+    background-color: rgb(22, 174, 164);
+    color: white;
+    font-size: 20px;
+}
+
+/* Color de las operaciones */
+
+.operaciones{
+    color: white;
+    background-color: rgb(30, 211, 199);
+}
